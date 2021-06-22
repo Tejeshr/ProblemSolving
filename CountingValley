@@ -1,0 +1,24 @@
+int countingValleys(int n, string s) {
+    int progress = 0;
+    int valleys = 0;
+    
+    for(int i = 0 ; i < s.size();i++)
+    {
+        if(s.at(i) == 'U')
+        {
+            progress++;
+        }
+        else if(s.at(i) == 'D')
+        {
+            progress--;
+        }
+
+        if(progress == 0 && s.at(i) == 'U' )
+        {
+            valleys++;
+        }
+        
+    }
+
+    return valleys;
+}
